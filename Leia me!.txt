@@ -1,0 +1,37 @@
+
+******************* Login e Token *******************
+
+1 - Entre no site https://tinder.com/ - logue com a conta que será usada.
+
+2 -  Quando estiver logado, Aperte F12 ou botão Direito do mouse > quando abrir as opções vá ate 'Inspecionar'.
+
+3 - Irá abrir um gerenciador de tráfico, na parte supeior do gerenciador irá ter colunas, clique na 'Console'.
+
+4 - Dentro do 'Console' copie e cole o comando > localStorage.getItem('TinderWeb/APIToken')
+
+5 - O copie o resultado, isso será o Token da conta.
+
+******************* Modo de uso *******************
+
+1 - Abra o arquivo 'tinder_bot' irá abrir uma janela.
+
+2 - Na primeira solicitação irá pedir o Token da conta, o mesmo token que foi passado no 'Login e token'.
+
+3 - Informe o nome que será salvo o arquivo csv, não será preciso colocar o formato.
+
+4 - selecione a capital que será extraida e clique em enter, pronto o bot está funcionando!
+
+
+******************* Aviso e recomendações *******************
+
+1 - A conta que será usada deverá ser uma conta premium, conta free não irá funcionar com as funcionalidades do bot.
+
+2 - O Token de acesso da conta, ele casuamente muda e por isso deve ser verificar pelo menos a cada dois dias.
+
+3 - Existe um Limite de quantos perfils pode ser visualizadas por cada conta, esse limite pode ser de 4500-15000.
+
+4 - Quando a conta chega no limit rate, costuma durar 24h bloqueada e depois voltará com um novo token de acesso.
+
+5 - O bot pode ser rodado em simultâneo com o mesmo token(conta) ou em token(contas) diferentes.
+
+6 - Quando o robo tiver rodando em simultâneo recomenda-se sempre mudar o nome do .csv, mesmo que sejá na mesmo token.
