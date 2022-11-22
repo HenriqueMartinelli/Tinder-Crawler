@@ -5,13 +5,13 @@ import sys
 import datetime
 from datetime import date 
 
-from salvar import salvar_csv
-from start import start_function
-from trocar_geolocalizacao import trocar_geolocalizacao
-from negativar_ids import negativar_ids
-from sep_interesses import sep_interesses
-from dict_uf import dict_uf
-from calcular_idade import calcular_idade
+from src.utils.salvar import salvar_csv
+from src.utils.start import start_function
+from src.uf_geolocation.trocar_geolocalizacao import trocar_geolocalizacao
+from src.utils.negativar_ids import negativar_ids
+from src.sep_interesses.sep_interesses import sep_interesses
+from src.utils.dict_uf import dict_uf
+from src.utils.calcular_idade import calcular_idade
 
 
 date_  = str(datetime.datetime.now()).replace(':', '_')
@@ -34,7 +34,6 @@ logging.basicConfig(
 class Crawler():
 
     def __exit__(self, type, value, traceback):
-        input()
         pass
     
     def __enter__(self):
@@ -104,9 +103,6 @@ class Crawler():
             if 'experiment_info' in result:
                 listnterests = [item['name'] for item in result['experiment_info']['user_interests']['selected_interests']]
             else: listnterests = []
-
-            idade = int(results.get('birth_date', '').split('T')[0].split('-')[0].strip())
-            print(idade)
             
             data["ID_USER"] = infos['ID_USER']
             data["Nome"] = infos['Nome']
